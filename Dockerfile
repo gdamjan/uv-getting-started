@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # Build image with python and uv
-FROM python:3.12-slim-bullseye AS build
+FROM python:3.12-slim AS build
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
 
 ENV UV_SYSTEM_PYTHON=1
@@ -24,7 +24,7 @@ RUN \
 
 
 # Runtime image
-FROM python:3.12-slim-bullseye
+FROM python:3.12-slim
 COPY --from=build /app/ /app/
 
 ENV PATH=/app/.venv/bin:$PATH
