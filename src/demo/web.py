@@ -1,12 +1,15 @@
-from asgiref.typing import (
-    ASGIReceiveCallable,
-    ASGISendCallable,
-    HTTPScope,
-)
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from asgiref.typing import (
+        ASGIReceiveCallable,
+        ASGISendCallable,
+        HTTPScope,
+    )
 
 
 async def app(
-    scope: HTTPScope, receive: ASGIReceiveCallable, send: ASGISendCallable
+    scope: "HTTPScope", receive: "ASGIReceiveCallable", send: "ASGISendCallable"
 ) -> None:
     assert scope["type"] == "http"
 

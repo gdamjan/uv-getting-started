@@ -58,7 +58,6 @@ name = "demo"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
-    { name = "asgiref" },
     { name = "granian" },
     { name = "httpx" },
     { name = "polars" },
@@ -66,13 +65,13 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "asgiref" },
     { name = "pyright" },
     { name = "ruff" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "asgiref", specifier = ">=3.8.1" },
     { name = "granian", specifier = ">=1.5.2" },
     { name = "httpx", specifier = ">=0.27.0" },
     { name = "polars", specifier = ">=1.5.0" },
@@ -80,6 +79,7 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "asgiref", specifier = ">=3.8.1" },
     { name = "pyright", specifier = ">=1.1.377" },
     { name = "ruff", specifier = ">=0.6.1" },
 ]
