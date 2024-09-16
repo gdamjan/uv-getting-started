@@ -32,3 +32,6 @@ jobs:
 
       - name: Typing checks
         run: uv run pyright
+
+      - name: Tests
+        run: uv run pytest
