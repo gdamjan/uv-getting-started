@@ -38,6 +38,9 @@ jobs:
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}}
             type=sha
+        # ghcr.io prefers index level annotations
+        env:
+          DOCKER_METADATA_ANNOTATIONS_LEVELS: manifest,index
 
       - name: Login to GitHub Container Registry
         if: github.event_name != 'pull_request'
