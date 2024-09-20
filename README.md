@@ -26,6 +26,8 @@ uv run ruff check
 podman build -t uv-demo .
 podman run -it --rm -p 8000:8000 uv-demo
 ```
+> [!NOTE]
+> Use Podman or Docker - it's the same, podman is rootless on Linux
 
 ### Running scripts:
 ```
