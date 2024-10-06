@@ -1,3 +1,5 @@
+# probably just copy https://github.com/github/gitignore/blob/main/Python.gitignore
 __pycache__/
 *.pyc
 *.pyo
+dist/
