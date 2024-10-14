@@ -1,12 +1,12 @@
-# An example "getting started" python project based on `uv`
+# An example _getting started_ python project based on `uv`
 
 [`uv`](https://docs.astral.sh/uv) - An extremely fast Python package and project manager, written in Rust
 
 - uses [`pyproject.toml`](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/) (and `uv.lock`)
 - follows the [`src/`](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/) directory layout
-- example prod-optimized `Dockerfile`
+- example production optimized `Dockerfile`
 - github actions ci
-- depends on: [httpx](https://www.python-httpx.org/), [granian](https://github.com/emmett-framework/granian) and [polars](https://docs.pola.rs/) just as an example
+- depends on: [httpx](https://www.python-httpx.org/), [granian](https://github.com/emmett-framework/granian) and [polars](https://docs.pola.rs/), just as an example
 
 ### Quickstart:
 ```
@@ -29,9 +29,25 @@ podman run -it --rm -p 8000:8000 uv-demo
 > [!NOTE]
 > Use Podman or Docker - it's the same, podman is rootless on Linux
 
-### Running scripts:
+### Running scripts
+
+These scripts will be executed in the context (venv, python) of the project, good for development helper scripts:
 ```
 uv run scripts/h.py
 uv run scripts/p.py
 uv run scripts/example.py 1 2 3 hello world 4 5
+```
+
+#### PEP 723
+`uv` can also run scripts that have the pep-0723 based metadata,
+like dependencies. There's no need to setup venvs or dependencies
+in a pyproject.toml file, uv automagically creats an ad-hoc venv
+for the script.
+
+See:
+* `uv` docs: [Running scripts - Creating a Python script](https://docs.astral.sh/uv/guides/scripts/#creating-a-python-script)
+* [PEP 723 – Inline script metadata](https://peps.python.org/pep-0723/)
+
+```
+uv run scripts/pep723.py
 ```
