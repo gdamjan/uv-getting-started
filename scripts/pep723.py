@@ -22,8 +22,8 @@ https://peps.python.org/pep-0723/
 uv run <this file>
 """
 
-import requests
-from rich.pretty import pprint
+import requests  # type: ignore
+from rich.pretty import pprint  # type: ignore
 
 resp = requests.get("https://peps.python.org/api/peps.json")
 data = resp.json()
