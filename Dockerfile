@@ -1,7 +1,10 @@
 # syntax=docker/dockerfile:1
 
+# Define Python version as an argument
+ARG PYTHON_VERSION=3.12
+
 ## Builder image with python and uv
-FROM python:3.12-slim AS builder
+FROM python:${PYTHON_VERSION}-slim AS builder
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 RUN <<EOF
     uv --version
@@ -36,7 +39,7 @@ RUN --mount=type=cache,target=/cache \
 
 
 ## Runtime image
-FROM python:3.12-slim
+FROM python:${PYTHON_VERSION}-slim
 
 # remove debianisms not needed in application containers
 RUN rm -rf /media /mnt /boot /home /opt /srv /var
