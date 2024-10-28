@@ -17,8 +17,8 @@ demo-cli = "demo.cli:main"
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[tool.uv]
-dev-dependencies = [
+[dependency-groups]
+dev = [
     "asgiref>=3.8.1",
     "ruff>=0.6.1",
     "pyright>=1.1.377",
