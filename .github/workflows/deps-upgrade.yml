@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: astral-sh/setup-uv@v3
+    - uses: astral-sh/setup-uv@v4
 
     # https://docs.astral.sh/uv/concepts/projects/#upgrading-locked-package-versions
     - run: uv lock --upgrade
