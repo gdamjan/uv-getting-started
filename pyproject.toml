@@ -3,6 +3,9 @@ name = "demo"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
+authors = [
+    { name = "Дамјан Георгиевски", email = "gdamjan@gmail.com" }
+]
 license-files = ["LICENSE"]
 classifiers = ["Private :: Do Not Upload"]
 requires-python = ">=3.12"
