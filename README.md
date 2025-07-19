@@ -12,7 +12,7 @@
 ### Quickstart:
 ```
 uv sync
-uv run granian --interface asgi demo.web:app
+uv run granian --reload --interface asgi demo.web:app
 ```
 
 I prefer to initialize projects as packages even for applications, this will setup the project using a
