@@ -6,12 +6,13 @@
 - follows the [`src/`](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/) directory layout
 - example production optimized `Dockerfile`
 - github actions ci
-- depends on: [httpx](https://www.python-httpx.org/), [granian](https://github.com/emmett-framework/granian) and [polars](https://docs.pola.rs/), just as an example
+- depends on: [starlette](https://www.starlette.io/), [httpx](https://www.python-httpx.org/),
+  [granian](https://github.com/emmett-framework/granian) and [polars](https://docs.pola.rs/), just as an example
 
 ### Quickstart:
 ```
 uv sync
-uv run granian --interface asginl demo.web:app
+uv run granian --interface asgi demo.web:app
 ```
 
 I prefer to initialize projects as packages even for applications, this will setup the project using a
