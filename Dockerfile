@@ -54,4 +54,4 @@ ENV \
     GRANIAN_HOST=0.0.0.0 \
     GRANIAN_PORT=8000
 
-ENTRYPOINT ["granian", "--interface", "asginl", "demo.web:app"]
+ENTRYPOINT ["granian", "--interface", "asgi", "demo.web:app"]

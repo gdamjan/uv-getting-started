@@ -13,6 +13,8 @@ dependencies = [
     "httpx>=0.27.0",
     "polars>=1.5.0",
     "granian>=1.5.2",
+    "sse-starlette>=2.4.1",
+    "starlette>=0.47.1",
 ]
 
 [project.scripts]

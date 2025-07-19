@@ -1,32 +1,35 @@
-from typing import TYPE_CHECKING
+from starlette.applications import Starlette
+from starlette.responses import JSONResponse, PlainTextResponse
+from starlette.routing import Route
+from sse_starlette.sse import EventSourceResponse
 
-if TYPE_CHECKING:
-    from asgiref.typing import (
-        ASGIReceiveCallable,
-        ASGISendCallable,
-        HTTPScope,
-    )
+import asyncio
 
 
-async def app(
-    scope: "HTTPScope", receive: "ASGIReceiveCallable", send: "ASGISendCallable"
-) -> None:
-    assert scope["type"] == "http"
+async def event_generator():
+    i = 0
+    while True:
+        await asyncio.sleep(1)
+        yield {"data": f"Event {i}", "event": "update", "id": str(i)}
+        i += 1
 
-    await send(
-        {
-            "type": "http.response.start",
-            "status": 200,
-            "headers": [
-                (b"content-type", b"text/plain"),
-            ],
-            "trailers": False,
-        }
-    )
-    await send(
-        {
-            "type": "http.response.body",
-            "body": b"Hello, world!",
-            "more_body": False,
-        }
-    )
+
+async def sse_endpoint(request):
+    return EventSourceResponse(event_generator())
+
+
+async def health_check(request):
+    return JSONResponse({"status": "ok"})
+
+
+async def hello(request):
+    return PlainTextResponse("Hello, world!")
+
+
+app = Starlette(
+    routes=[
+        Route("/", hello),
+        Route("/events", sse_endpoint),
+        Route("/health", health_check),
+    ],
+)
