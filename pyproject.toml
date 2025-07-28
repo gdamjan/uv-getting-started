@@ -10,10 +10,10 @@ license-files = ["LICENSE"]
 classifiers = ["Private :: Do Not Upload"]
 requires-python = ">=3.12"
 dependencies = [
-    "httpx>=0.27.0",
-    "polars>=1.5.0",
-    "granian>=1.5.2",
-    "sse-starlette>=2.4.1",
+    "httpx>=0.28.0",
+    "polars>=1.31.0",
+    "granian>=2",
+    "sse-starlette>=3",
     "starlette>=0.47.1",
 ]
 
@@ -26,9 +26,9 @@ build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
-    "asgiref>=3.8.1",
-    "ruff>=0.6.1",
-    "pyright>=1.1.377",
-    "pytest>=8.3.3",
-    "granian[reload]>=2.4.2",
+    "asgiref>=3.9.1",
+    "ruff>=0.12.0",
+    "pyright>=1.1.403",
+    "pytest>=8.4.0",
+    "granian[reload]>=2",
 ]
