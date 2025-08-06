@@ -1,5 +1,6 @@
 # don't send local dev files to docker context
 Dockerfile
+.python-version
 .venv/
 __pycache__/
 *.pyc
