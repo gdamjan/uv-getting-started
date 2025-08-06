@@ -24,7 +24,7 @@ uv init --package
 
 ### Running dev tools:
 ```
-uv run pyright
+uv run ty check
 uv run ruff format
 uv run ruff check
 ```
