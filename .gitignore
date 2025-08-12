@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 *.pyo
 dist/
+
+# ignore all hidden files by default, use `git add -f` for exceptions
+.*
