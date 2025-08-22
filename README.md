@@ -25,7 +25,7 @@ uv init --package
 ### Running dev tools:
 ```
 uv run ty check
-uv run ruff format
+uv format
 uv run ruff check
 ```
 

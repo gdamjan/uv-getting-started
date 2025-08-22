@@ -22,8 +22,8 @@ jobs:
       - name: Install the project
         run: uv sync --all-extras --dev --locked
 
-      - name: Ruff formater
-        run: uv run ruff format --check
+      - name: Python code formater check
+        run: uv format --check
 
       - name: Ruff linter
         run: uv run ruff check
