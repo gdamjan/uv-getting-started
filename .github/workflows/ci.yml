@@ -29,7 +29,7 @@ jobs:
         run: uv run ruff check
 
       - name: Typing checks
-        run: uv run pyright
+        run: uv run ty check
 
       - name: Tests
         run: uv run pytest
