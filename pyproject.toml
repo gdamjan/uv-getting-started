@@ -21,7 +21,7 @@ dependencies = [
 demo-cli = "demo.cli:main"
 
 [build-system]
-requires = ["uv_build>=0.8,<0.9"]
+requires = ["uv_build>=0.9,<0.10"]
 build-backend = "uv_build"
 
 [dependency-groups]
