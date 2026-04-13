@@ -29,6 +29,6 @@ dev = [
     "asgiref>=3.9.1",
     "ruff>=0.12.0",
     "pytest>=8.4.0",
-    "granian[reload]>=2",
+    "granian[reload]>=2.7.3",
     "ty>=0.0.5",
 ]
