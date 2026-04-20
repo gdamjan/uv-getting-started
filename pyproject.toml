@@ -28,7 +28,7 @@ build-backend = "uv_build"
 dev = [
     "asgiref>=3.9.1",
     "ruff>=0.12.0",
-    "pytest>=8.4.0",
+    "pytest>=9.0.3",
     "granian[reload]>=2",
     "ty>=0.0.5",
 ]
