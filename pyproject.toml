@@ -11,7 +11,7 @@ classifiers = ["Private :: Do Not Upload"]
 requires-python = ">=3.12"
 dependencies = [
     "httpx>=0.28.0",
-    "polars>=1.31.0",
+    "polars>=1.40.0",
     "granian>=2",
     "sse-starlette>=3",
     "starlette>=1",
