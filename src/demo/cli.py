@@ -1,4 +1,5 @@
 import argparse
+import importlib.metadata
 
 
 def main():
@@ -11,5 +12,6 @@ def main():
     parser.add_argument("-c", "--count")  # option that takes a value
     parser.add_argument("-v", "--verbose", action="store_true")  # on/off flag
 
+    print(f"Project version is: {importlib.metadata.version(__package__)}")
     args = parser.parse_args()
-    print(args.filename, args.count, args.verbose)
+    print(f"CLI args: {args!r}")
