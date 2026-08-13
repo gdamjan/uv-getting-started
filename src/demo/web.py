@@ -1,9 +1,9 @@
+import asyncio
+
+from sse_starlette.sse import EventSourceResponse
 from starlette.applications import Starlette
 from starlette.responses import JSONResponse, PlainTextResponse
 from starlette.routing import Route
-from sse_starlette.sse import EventSourceResponse
-
-import asyncio
 
 
 async def event_generator():
