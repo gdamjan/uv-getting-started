@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # Define Python version as an argument
-ARG PYTHON_VERSION=3.12
+ARG PYTHON_VERSION=3.14
 
 ## Builder image with python and uv
 FROM python:${PYTHON_VERSION}-slim AS builder
