@@ -6,9 +6,9 @@ jobs:
   flake-update:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
 
-    - uses: astral-sh/setup-uv@v8.0.0
+    - uses: astral-sh/setup-uv@v10.0.0
 
     # https://docs.astral.sh/uv/concepts/projects/#upgrading-locked-package-versions
     - run: uv lock --upgrade
