@@ -13,7 +13,7 @@ dependencies = [
     "httpx>=0.28.0",
     "polars>=2.0.0",
     "granian>=2",
-    "sse-starlette>=3",
+    "sse-starlette>=3.6.0",
     "starlette>=1",
 ]
 
