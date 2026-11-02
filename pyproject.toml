@@ -26,7 +26,7 @@ build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
-    "asgiref>=3.9.1",
+    "asgiref>=3.13.0",
     "ruff>=0.17.2",
     "pytest>=8.4.0",
     "granian[reload]>=2",
